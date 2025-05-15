@@ -7,21 +7,13 @@ use Illuminate\Support\ServiceProvider;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * All of the container bindings that should be registered.
+     *
+     * @var array
      */
-    public function register(): void
-    {
-        $this->app->bind(
-            \App\Repositories\UserRepositoryInterface::class,
-            \App\Repositories\UserRepository::class
-        );
-    }
+    public $bindings = [
 
-    /**
-     * Bootstrap any application services.
-     */
-    public function boot(): void
-    {
-        //
-    }
+        \App\Repositories\UserRepositoryInterface::class => \App\Repositories\UserRepository::class,
+        \App\Repositories\HealthcareProfessionalRepositoryInterface::class => \App\Repositories\HealthcareProfessionalRepository::class,
+    ];
 }

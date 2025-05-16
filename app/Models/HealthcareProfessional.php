@@ -19,4 +19,9 @@ class HealthcareProfessional extends Model
         'name',
         'speciality',
     ];
+
+    public function appointments()
+    {
+        return $this->hasMany(Appointment::class);
+    }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-interface HealthcareProfessionalRepositoryInterface
+interface AppointmentRepositoryInterface
 {
     public function all();
 
@@ -14,7 +14,9 @@ interface HealthcareProfessionalRepositoryInterface
 
     public function delete($id);
 
-    public function paginate(int $perPage = 10);
+    public function getMyAppointments($userId);
 
-    public function isAvailable($data);
+    public function complete($id);
+
+    public function cancel($id);
 }

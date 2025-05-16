@@ -17,6 +17,7 @@ class HealthcareProfessionalController extends Controller
 
     /**
      * Get the paginated list of all healthcare professionals.
+     *
      * @return HealthcareProfessionalResource
      */
     public function index()
